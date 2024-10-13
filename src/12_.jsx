@@ -25,10 +25,6 @@ const carro = {
     }
 };
 
-const button = document.createElement('button');
-button.textContent = 'Mostrar Inventario';
-document.body.appendChild(button);
-
-button.addEventListener('click', () => {
-    console.log(carro.inventario);
-});
+const { nombre, marca } = carro;
+console.log(nombre); // "ford"
+console.log(marca); // { nombre: "ford", lastname: "mustang", year: 1969, color: "red", price: 5000 }

@@ -25,10 +25,10 @@ const carro = {
     }
 };
 
-const button = document.createElement('button');
-button.textContent = 'Mostrar Inventario';
-document.body.appendChild(button);
-
-button.addEventListener('click', () => {
-    console.log(carro.inventario);
-});
+const obtenerInventario = async () => {
+    const inventario = await new Promise(resolve => {
+        setTimeout(() => resolve(carro.inventario), 1000);
+    });
+    console.log(inventario);
+};
+obtenerInventario();

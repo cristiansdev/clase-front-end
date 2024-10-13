@@ -25,10 +25,5 @@ const carro = {
     }
 };
 
-const button = document.createElement('button');
-button.textContent = 'Mostrar Inventario';
-document.body.appendChild(button);
-
-button.addEventListener('click', () => {
-    console.log(carro.inventario);
-});
+const nuevoInventario = [...carro.inventario, { id: 4, color: 'negro', price: 6000 }];
+console.log(nuevoInventario); // Inventario con un nuevo carro agregado

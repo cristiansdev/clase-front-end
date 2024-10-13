@@ -25,10 +25,5 @@ const carro = {
     }
 };
 
-const button = document.createElement('button');
-button.textContent = 'Mostrar Inventario';
-document.body.appendChild(button);
-
-button.addEventListener('click', () => {
-    console.log(carro.inventario);
-});
+console.log(carro.marca?.color); // "red"
+console.log(carro.motor?.type); // undefined (sin error)

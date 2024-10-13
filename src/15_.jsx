@@ -25,10 +25,5 @@ const carro = {
     }
 };
 
-const button = document.createElement('button');
-button.textContent = 'Mostrar Inventario';
-document.body.appendChild(button);
-
-button.addEventListener('click', () => {
-    console.log(carro.inventario);
-});
+const precios = carro.inventario.map(item => item.price);
+console.log(precios); // [5000, 5000, 5000]

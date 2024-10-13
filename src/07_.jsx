@@ -25,10 +25,11 @@ const carro = {
     }
 };
 
-const button = document.createElement('button');
-button.textContent = 'Mostrar Inventario';
-document.body.appendChild(button);
-
-button.addEventListener('click', () => {
-    console.log(carro.inventario);
-});
+const carroActualizado = {
+    ...carro,
+    marca: {
+        ...carro.marca,
+        color: 'blue'
+    }
+};
+console.log(carroActualizado.marca.color); // "blue"

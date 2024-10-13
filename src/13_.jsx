@@ -25,10 +25,7 @@ const carro = {
     }
 };
 
-const button = document.createElement('button');
-button.textContent = 'Mostrar Inventario';
-document.body.appendChild(button);
-
-button.addEventListener('click', () => {
-    console.log(carro.inventario);
-});
+function mostrarInfo({ nombre, marca }) {
+    return `El carro es un ${nombre} ${marca.lastname}`;
+}
+console.log(mostrarInfo(carro)); // "El carro es un ford mustang"

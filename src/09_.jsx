@@ -25,10 +25,5 @@ const carro = {
     }
 };
 
-const button = document.createElement('button');
-button.textContent = 'Mostrar Inventario';
-document.body.appendChild(button);
-
-button.addEventListener('click', () => {
-    console.log(carro.inventario);
-});
+const esDeLujo = carro.marca.price > 3000 ? 'Sí es de lujo' : 'No es de lujo';
+console.log(esDeLujo); // "Sí es de lujo"

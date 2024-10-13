@@ -25,10 +25,5 @@ const carro = {
     }
 };
 
-const button = document.createElement('button');
-button.textContent = 'Mostrar Inventario';
-document.body.appendChild(button);
-
-button.addEventListener('click', () => {
-    console.log(carro.inventario);
-});
+const carroRojo = carro.inventario.find(item => item.color === 'red');
+console.log(carroRojo); // {id: 1, color: 'red', price: 5000}

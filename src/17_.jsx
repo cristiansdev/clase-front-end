@@ -25,10 +25,14 @@ const carro = {
     }
 };
 
-const button = document.createElement('button');
-button.textContent = 'Mostrar Inventario';
-document.body.appendChild(button);
+// find
+const carroVerde = carro.inventario.find(item => item.color === 'verde');
+console.log(carroVerde); // {id: 2, color: 'verde', price: 5000}
 
-button.addEventListener('click', () => {
-    console.log(carro.inventario);
-});
+// filter
+const carrosEconomicos = carro.inventario.filter(item => item.price < 6000);
+console.log(carrosEconomicos); // [{id: 1, ...}, {id: 2, ...}, {id: 3, ...}]
+
+// some
+const hayCarrosRojos = carro.inventario.some(item => item.color === 'red');
+console.log(hayCarrosRojos); // true

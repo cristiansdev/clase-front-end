@@ -1,4 +1,4 @@
-const carro = {
+export const carro = {
     id: 1,
     nombre: 'ford',
     marca: {
@@ -24,11 +24,3 @@ const carro = {
         return total;
     }
 };
-
-const button = document.createElement('button');
-button.textContent = 'Mostrar Inventario';
-document.body.appendChild(button);
-
-button.addEventListener('click', () => {
-    console.log(carro.inventario);
-});
